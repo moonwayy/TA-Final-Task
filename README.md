@@ -47,4 +47,8 @@ This project automates the testing of the login form on [Saucedemo](https://www.
    ```sh
    mvn clean test
    ```
-4. View test reports in the **target/surefire-reports** directory.
+4. View test reports in the **target/allure-results** directory.
+   ```sh
+    allure serve target/allure-results
+   ```
+   

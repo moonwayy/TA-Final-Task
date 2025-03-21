@@ -25,5 +25,5 @@ Feature: Login Page Functionality
     When I enter a valid username in the username field
     And I enter "secret_sauce" in the password field
     And I click the login button
-    Then I should be redirected to the dashboard
-    And the page title should be "Swag Labs"
+    And I should be redirected to the dashboard
+    Then the page title should be "Swag Labs"

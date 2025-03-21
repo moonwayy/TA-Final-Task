@@ -1,6 +1,5 @@
 package stepDefinitions;
 
-import constants.Username;
 import drivers.DriverSingleton;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
