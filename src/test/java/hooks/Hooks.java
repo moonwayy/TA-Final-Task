@@ -3,14 +3,14 @@ package hooks;
 import drivers.DriverSingleton;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import utils.SettingsTestData;
 
 import static io.qameta.allure.Allure.step;
 
 public class Hooks {
-    private static final Logger logger = LogManager.getLogger(Hooks.class);
+    private static final Logger logger = LoggerFactory.getLogger(Hooks.class);
 
     @Before
     public void setUp() {

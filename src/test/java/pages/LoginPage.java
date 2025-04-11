@@ -1,8 +1,8 @@
 package pages;
 
 import constants.Username;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,7 +15,7 @@ import java.time.Duration;
 
 public class LoginPage extends AbstractPage {
     private final WebDriverWait wait;
-    private final Logger logger = LogManager.getLogger(LoginPage.class);
+    private final Logger logger = LoggerFactory.getLogger(LoginPage.class);
 
     @FindBy(css = "input#user-name")
     private WebElement usernameInput;

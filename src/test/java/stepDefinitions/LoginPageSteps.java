@@ -4,8 +4,9 @@ import drivers.DriverSingleton;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.assertj.core.api.Assertions;
 import pages.LoginPage;
+
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class LoginPageSteps {
     private final LoginPage loginPage = new LoginPage(DriverSingleton.getDriver());
@@ -48,6 +49,6 @@ public class LoginPageSteps {
     @Then("I should see an error message {string}")
     public void iSeeAnErrormessage(String expectedMessage) {
         String actualMessage = loginPage.getErrorMessage();
-        Assertions.assertThat(actualMessage).contains(expectedMessage);
+        assertThat(actualMessage).contains(expectedMessage);
     }
 }

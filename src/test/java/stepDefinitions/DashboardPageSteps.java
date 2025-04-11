@@ -3,8 +3,9 @@ package stepDefinitions;
 import drivers.DriverSingleton;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.assertj.core.api.Assertions;
 import pages.DashboardPage;
+
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class DashboardPageSteps {
     private final DashboardPage dashboardPage = new DashboardPage(DriverSingleton.getDriver());
@@ -16,6 +17,6 @@ public class DashboardPageSteps {
 
     @Then("the page title should be {string}")
     public void thePageTitleShouldBe(String expectedTitle) {
-        Assertions.assertThat(dashboardPage.getTitleText()).isEqualTo(expectedTitle);
+        assertThat(dashboardPage.getTitleText()).isEqualTo(expectedTitle);
     }
 }

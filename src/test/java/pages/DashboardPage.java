@@ -1,7 +1,7 @@
 package pages;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,7 +14,7 @@ import java.time.Duration;
 
 public class DashboardPage extends AbstractPage {
     private final WebDriverWait wait;
-    private final Logger logger = LogManager.getLogger(DashboardPage.class);
+    private final Logger logger = LoggerFactory.getLogger(DashboardPage.class);
 
     @FindBy(css = "div.app_logo")
     private WebElement appLogo;

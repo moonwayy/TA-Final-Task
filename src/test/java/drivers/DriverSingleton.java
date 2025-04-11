@@ -1,7 +1,7 @@
 package drivers;
 
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -9,7 +9,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class DriverSingleton {
     private static final ThreadLocal<WebDriver> driverThreadLocal = new ThreadLocal<>();
-    private static final Logger logger = LogManager.getLogger(DriverSingleton.class);
+    private static final Logger logger = LoggerFactory.getLogger(DriverSingleton.class);
 
     public static WebDriver getDriver() {
         if (driverThreadLocal.get() == null) {
@@ -21,7 +21,7 @@ public class DriverSingleton {
 
     private static WebDriver createDriver() {
         String browser = System.getProperty("browser", "firefox").toLowerCase();
-        logger.info("Selected browser: " + browser);
+        logger.info("Selected browser: {}", browser);
         switch (browser) {
             case "chrome":
                 return new ChromeDriver();
