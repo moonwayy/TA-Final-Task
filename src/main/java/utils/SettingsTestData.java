@@ -15,7 +15,7 @@ import java.io.FileReader;
 public class SettingsTestData {
     private static final Logger logger = LogManager.getLogger(SettingsTestData.class);
 
-    public final String RESOURCES_PATH = "src/test/resources/";
+    public final String RESOURCES_PATH = "src/main/resources/";
     private final String ENVIRONMENT_PATH = RESOURCES_PATH + "environment/";
     private final ISettingsFile ENVIRONMENT_CONFIG = new JsonSettingsFile("env.json");
     private final Gson GSON = new Gson();
